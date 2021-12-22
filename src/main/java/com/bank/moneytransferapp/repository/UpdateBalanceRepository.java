@@ -11,7 +11,7 @@ import com.bank.moneytransferapp.entity.Deposit;
 public interface UpdateBalanceRepository extends JpaRepository<Deposit, Long>{
 	@Transactional
 	@Modifying
-	@Query("UPDATE Deposit SET balance = balance + :balance WHERE userid = :userid")// AND accountnumber = :accountnumbe")
-	Integer updatebalance(int balance, int userid);//,String accountnumber);
+	@Query("UPDATE Deposit SET balance = balance + :balance WHERE userid = :userid")
+	Integer updatebalance(int balance, int userid);
 
 }

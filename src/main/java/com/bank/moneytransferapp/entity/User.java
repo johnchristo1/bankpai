@@ -33,10 +33,16 @@ public class User {
 	@Column(name = "address")
 	 private String address;
 	
+	@Column(name = "accounttype")
+	 private String accounttype;
+	
 
 	 
-	 
-	public User(String username, String age, String birthday, String phonenumber, String email, String address) {
+
+	
+
+	public User(String username, String age, String birthday, String phonenumber, String email, String address,
+			String accounttype) {
 		super();
 		this.username = username;
 		this.age = age;
@@ -44,9 +50,9 @@ public class User {
 		this.phonenumber = phonenumber;
 		this.email = email;
 		this.address = address;
+		this.accounttype = accounttype;
 	}
 	
-
 	public long getId() {
 		return id;
 	}
@@ -88,6 +94,14 @@ public class User {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public String getAccounttype() {
+		return accounttype;
+	}
+
+	public void setAccounttype(String accounttype) {
+		this.accounttype = accounttype;
 	}
 	 
 	 

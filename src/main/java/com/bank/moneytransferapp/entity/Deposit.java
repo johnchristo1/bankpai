@@ -21,23 +21,22 @@ public class Deposit {
 	@Column(name = "userid")
 	private int userid;
 	
-//	@Column(name = "acccountnumber")
-//	private String accountnumber;
-//	
-//	
+    @Column(name = "acccountnumber")
+    private String accountnumber;
+	
 
-//	public Deposit(String accountnumber) {
-//		super();
-//		this.accountnumber = accountnumber;
-//	}
-//
-//	public String getAccountnumber() {
-//		return accountnumber;
-//	}
-//
-//	public void setAccountnumber(String accountnumber) {
-//		this.accountnumber = accountnumber;
-//	}
+    public Deposit(String accountnumber) {
+		super();
+	    this.accountnumber = accountnumber;
+	}
+
+	public String getAccountnumber() {
+	return accountnumber;
+	}
+
+	public void setAccountnumber(String accountnumber) {
+		this.accountnumber = accountnumber;
+	}
 
 	public Deposit(int balance, int userid) {
 		super();
