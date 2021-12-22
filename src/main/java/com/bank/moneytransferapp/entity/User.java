@@ -24,14 +24,16 @@ public class User {
 	@Column(name = "birthday")
 	 private String birthday;
 	
-	@Column(name = "phonenumber")
+	@Column(name = "phonenumber", unique = true)
 	 private String phonenumber;
 	
-	@Column(name = "email")
+	@Column(name = "email",unique = true)
 	 private String email;
 	
 	@Column(name = "address")
 	 private String address;
+	
+
 	 
 	 
 	public User(String username, String age, String birthday, String phonenumber, String email, String address) {
@@ -44,7 +46,7 @@ public class User {
 		this.address = address;
 	}
 	
-	
+
 	public long getId() {
 		return id;
 	}
