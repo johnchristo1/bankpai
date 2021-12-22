@@ -42,7 +42,7 @@ public class UserController {
        //update balance
         @PutMapping("/deposit")
         public String updateAmount(@RequestBody Deposit deposit) {
-    	      updateBalance.updatebalance(deposit.getBalance(), deposit.getUserid());//, deposit.getAccountnumber());
+    	      updateBalance.updatebalance(deposit.getBalance(), deposit.getUserid());
     	      return "credited";
     }
 	
