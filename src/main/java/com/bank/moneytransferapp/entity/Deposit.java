@@ -18,30 +18,15 @@ public class Deposit {
 	@Column(name="balance")
 	private int balance;
 	
-	@Column(name = "userid")
-	private int userid;
-	
     @Column(name = "acccountnumber")
-    private String accountnumber;
-	
+    private int accountnumber;
+    
+    
 
-    public Deposit(String accountnumber) {
-		super();
-	    this.accountnumber = accountnumber;
-	}
-
-	public String getAccountnumber() {
-	return accountnumber;
-	}
-
-	public void setAccountnumber(String accountnumber) {
-		this.accountnumber = accountnumber;
-	}
-
-	public Deposit(int balance, int userid) {
+	public Deposit(int balance,int accountnumber) {
 		super();
 		this.balance = balance;
-		this.userid = userid;
+		this.accountnumber = accountnumber;
 	}
 
 	public long getId() {
@@ -60,12 +45,12 @@ public class Deposit {
 		this.balance = balance;
 	}
 
-	public int getUserid() {
-		return userid;
+	public int getAccountnumber() {
+		return accountnumber;
 	}
 
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setAccountnumber(int accountnumber) {
+		this.accountnumber = accountnumber;
 	}
 	
 	
