@@ -33,7 +33,7 @@ public class User {
 	@Column(name = "address")
 	 private String address;
 	
-	@Column(name = "accounttype")
+	@Column(name = "accounttype", unique = true)
 	 private String accounttype;
 	
 

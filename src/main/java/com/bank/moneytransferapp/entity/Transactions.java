@@ -17,8 +17,8 @@ public class Transactions {
 	@Column(name = "amount")
 	private int amount;
 	
-	@Column(name="senteraccountnumber")
-	private int senteraccountnumber;
+	@Column(name="senderaccountnumber")
+	private int senderaccountnumber;
 	
 	@Column(name="receiveraccountnumber")
 	private int receiveraccountnumber;
@@ -28,14 +28,14 @@ public class Transactions {
 	
 	@Column(name="time")
 	private String time;
-		
+	
+	
 
 	public Transactions() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	
 	public long getId() {
 		return id;
 	}
@@ -52,12 +52,12 @@ public class Transactions {
 		this.amount = amount;
 	}
 
-	public int getSenteraccountnumber() {
-		return senteraccountnumber;
+	public int getSenderaccountnumber() {
+		return senderaccountnumber;
 	}
 
-	public void setSenteraccountnumber(int senteraccountnumber) {
-		this.senteraccountnumber = senteraccountnumber;
+	public void setSenderaccountnumber(int senderaccountnumber) {
+		this.senderaccountnumber = senderaccountnumber;
 	}
 
 	public int getReceiveraccountnumber() {
@@ -83,8 +83,6 @@ public class Transactions {
 	public void setTime(String time) {
 		this.time = time;
 	}
-	
-	
-
+		
 
 }

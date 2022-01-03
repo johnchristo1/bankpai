@@ -18,12 +18,12 @@ public class Deposit {
 	@Column(name="balance")
 	private int balance;
 	
-    @Column(name = "acccountnumber")
+    @Column(name = "accountnumber")
     private int accountnumber;
     
-    
 
-	public Deposit(int balance,int accountnumber) {
+
+	public Deposit(int balance, int accountnumber) {
 		super();
 		this.balance = balance;
 		this.accountnumber = accountnumber;
@@ -52,6 +52,6 @@ public class Deposit {
 	public void setAccountnumber(int accountnumber) {
 		this.accountnumber = accountnumber;
 	}
-	
-	
+
+    	
 }
