@@ -48,9 +48,9 @@ public class UserController {
 		
 		//Deposit amount and add user account
 		@PostMapping("/addamount")
-		public Deposit depositAmount(@RequestBody Deposit deposit) {
+		public String depositAmount(@RequestBody Deposit deposit) {
 			depositRepository.save(deposit);
-			return deposit;
+			return "added Rs."+ deposit.getBalance();
 		  }	
 		
 		
@@ -139,7 +139,7 @@ public class UserController {
 			String amounts=String.valueOf(transfer.getAmount());
 			
     		  try {
-		          producer.send(bankTransaction(sender,receiver,amounts));
+		          producer.send(bankTransaction(sender,amounts,receiver));
 		          Thread.sleep(100);
 
 
