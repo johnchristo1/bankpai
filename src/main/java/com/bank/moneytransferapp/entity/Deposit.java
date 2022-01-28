@@ -6,27 +6,30 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "bankbalace")
+@Table(name = "accountbalace")
 public class Deposit {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
-	@Column(name="balance")
-	private int balance;
-	
-    @Column(name = "accountnumber")
-    private int accountnumber;
-    
 
+	@NotNull(message = "not given")
+	@Column(name = "deposit")
+	private int deposit;
 
-	public Deposit(int balance, int accountnumber) {
+	@NotNull(message = "not given")
+	@Column(name = "accountnumber")
+	private int accountnumber;
+
+	@Column(name = "userid")
+	private int userid;
+
+	public Deposit() {
 		super();
-		this.balance = balance;
-		this.accountnumber = accountnumber;
+		// TODO Auto-generated constructor stub
 	}
 
 	public long getId() {
@@ -37,12 +40,12 @@ public class Deposit {
 		this.id = id;
 	}
 
-	public int getBalance() {
-		return balance;
+	public int getDeposit() {
+		return deposit;
 	}
 
-	public void setBalance(int balance) {
-		this.balance = balance;
+	public void setDeposit(int deposit) {
+		this.deposit = deposit;
 	}
 
 	public int getAccountnumber() {
@@ -53,5 +56,12 @@ public class Deposit {
 		this.accountnumber = accountnumber;
 	}
 
-    	
+	public int getUserid() {
+		return userid;
+	}
+
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
+
 }

@@ -11,7 +11,7 @@ import com.bank.moneytransferapp.entity.Deposit;
 @Repository
 public interface GetAccountnumberRepository extends JpaRepository<Deposit,Long>{
 	
-	@Query(value="select accountnumber from bankbalace u where u.accountnumber =:accountnumber", nativeQuery=true)
+	@Query(value="select accountnumber from accountbalace u where u.accountnumber =:accountnumber", nativeQuery=true)
 	Integer getaccountnumber(@Param("accountnumber") int accountnumber);
 	
 }

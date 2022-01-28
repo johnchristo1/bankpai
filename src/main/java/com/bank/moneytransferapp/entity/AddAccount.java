@@ -6,34 +6,32 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="addaccounts")
-public class AddAccountno {
+@Table(name = "Accounts")
+public class AddAccount {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
-	@Column(name = "senderaccountno",unique=true)
-	private int senderaccountno;
-	
+
+	@NotNull(message = "not given")
+	@Column(name = "toaccountnumber")
+	private int toaccountnumber;
+
+	@NotEmpty(message = "not given")
 	@Column(name = "name")
 	private String name;
-	
-	
+
+	@NotEmpty(message = "not given")
 	@Column(name = "bankname")
 	private String bankname;
-	
-	@Column(name = "ifccode")
-	private String ifccode;
 
-	public AddAccountno(int senderaccountno, String name, String bankname, String ifccode) {
-		super();
-		this.senderaccountno = senderaccountno;
-		this.name = name;
-		this.bankname = bankname;
-		this.ifccode = ifccode;
-	}
+	@NotEmpty(message = "not given")
+	@Column(name = "ifsccode")
+	private String ifsccode;
 
 	public long getId() {
 		return id;
@@ -43,12 +41,12 @@ public class AddAccountno {
 		this.id = id;
 	}
 
-	public int getSenderaccountno() {
-		return senderaccountno;
+	public int getToaccountnumber() {
+		return toaccountnumber;
 	}
 
-	public void setSenderaccountno(int senderaccountno) {
-		this.senderaccountno = senderaccountno;
+	public void setToaccountnumber(int toaccountnumber) {
+		this.toaccountnumber = toaccountnumber;
 	}
 
 	public String getName() {
@@ -67,15 +65,12 @@ public class AddAccountno {
 		this.bankname = bankname;
 	}
 
-	public String getIfccode() {
-		return ifccode;
+	public String getIfsccode() {
+		return ifsccode;
 	}
 
-	public void setIfccode(String ifccode) {
-		this.ifccode = ifccode;
+	public void setIfsccode(String ifsccode) {
+		this.ifsccode = ifsccode;
 	}
 
-	
-	
-	
 }

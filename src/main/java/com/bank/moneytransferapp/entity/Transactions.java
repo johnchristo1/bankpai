@@ -8,28 +8,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="transactions")
+@Table(name = "transactions")
 public class Transactions {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
-	@Column(name = "amount")
-	private int amount;
-	
-	@Column(name="senderaccountnumber")
+
+	@Column(name = "deposit")
+	private int deposit;
+
+	@Column(name = "senderaccountnumber")
 	private int senderaccountnumber;
-	
-	@Column(name="receiveraccountnumber")
+
+	@Column(name = "receiveraccountnumber")
 	private int receiveraccountnumber;
-	
-	@Column(name="status")
+
+	@Column(name = "status")
 	private String status;
-	
-	@Column(name="time")
+
+	@Column(name = "time")
 	private String time;
-	
-	
 
 	public Transactions() {
 		super();
@@ -44,12 +42,12 @@ public class Transactions {
 		this.id = id;
 	}
 
-	public int getAmount() {
-		return amount;
+	public int getDeposit() {
+		return deposit;
 	}
 
-	public void setAmount(int amount) {
-		this.amount = amount;
+	public void setDeposit(int deposit) {
+		this.deposit = deposit;
 	}
 
 	public int getSenderaccountnumber() {
@@ -83,6 +81,5 @@ public class Transactions {
 	public void setTime(String time) {
 		this.time = time;
 	}
-		
 
 }
